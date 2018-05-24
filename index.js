@@ -1,5 +1,3 @@
-'use strict';
-
 const spawnSync = require('child_process').spawnSync;
 
 class ServerlessPlugin {
@@ -33,7 +31,7 @@ class ServerlessPlugin {
     const args = [
       's3',
       'sync',
-      'app/',
+      'build/',
       `s3://${s3Bucket}/`,
     ];
     const result = spawnSync('aws', args);
